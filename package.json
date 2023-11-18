@@ -1,0 +1,28 @@
+{
+  "name": "tree-sitter-hungarian",
+  "version": "1.0.0",
+  "description": "Hungarian notation grammar for language-injection",
+  "main": "grammar.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpt13653903/tree-sitter-hungarian.git"
+  },
+  "keywords": [
+    "tree-sitter"
+    "hungarian"
+  ],
+  "author": "John-Philip Taylor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jpt13653903/tree-sitter-hungarian/issues"
+  },
+  "homepage": "https://github.com/jpt13653903/tree-sitter-hungarian#readme",
+  "dependencies": {
+    "nan": "^2.18.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.8"
+  }
+}
