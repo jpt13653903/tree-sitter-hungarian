@@ -4,3 +4,15 @@
 *.bak
 ~*
 
+*.exp
+*.lib
+*.obj
+*.so
+src/*.json
+
+Cargo.toml
+binding*
+node_modules
+
+package-lock.json
+
