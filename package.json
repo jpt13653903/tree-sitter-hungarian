@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "description": "Hungarian notation grammar for language-injection",
   "main": "grammar.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jpt13653903/tree-sitter-hungarian.git"
   },
   "keywords": [
-    "tree-sitter"
+    "tree-sitter",
     "hungarian"
   ],
   "author": "John-Philip Taylor",
