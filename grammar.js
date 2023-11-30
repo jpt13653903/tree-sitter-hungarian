@@ -23,9 +23,10 @@ module.exports = grammar({
     ),
 
     _prefix: $ => token(prec(4, choice(
-      /([Gmg]_)?([pamvch]|lp)*(v|b|f|c|ch|st|cl|s|e|t|sz|br|fn|w|dw|l|ui)/,
-      /([Gmg]_)?([pamvch]|lp)*[ui][1248]?/,
-      /([Gmg]_)?([pamvch]|lp)*[fc](4|8|10)/,
+      /([Gmg]_)?([pamvch]|lp)*(v|b|f|c|ch|cx|st|cl|s|e|t|sz|br|fn)/,
+      /([Gmg]_)?([pamvch]|lp)*(cx)?(w|dw|l|ui)/,
+      /([Gmg]_)?([pamvch]|lp)*(cx)?[ui][1248]?/,
+      /([Gmg]_)?([pamvch]|lp)*(cx)?[fc](4|8|10)/,
       /([Gmg]_)?(thr|th|h|it|lp)/,
       /b[0-9]+/,
       /n/,
