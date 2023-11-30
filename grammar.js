@@ -14,7 +14,7 @@ module.exports = grammar({
       $.body
     ),
     prefix: $ => $._prefix,
-    body:   $ => seq($._uppercase, $._identifier_chars),
+    body:   $ => seq($._uppercase, optional($._identifier_chars)),
 
     _normal: $ => choice(
       seq($._prefix,           $._identifier_chars),
