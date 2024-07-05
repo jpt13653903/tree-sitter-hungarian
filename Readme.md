@@ -1,4 +1,8 @@
-# Tree-sitter Hungarian
+# Tree-sitter-hungarian
+
+[![CI][ci]](https://github.com/jpt13653903/tree-sitter-hungarian/actions/workflows/ci.yml)
+[![Fuzz][fuzz]](https://github.com/jpt13653903/tree-sitter-hungarian/actions/workflows/fuzz.yml)
+[![matrix][matrix]](https://matrix.to/#/#tree-sitter-chat:matrix.org)
 
 Hungarian notation grammar for language-injection
 
@@ -20,7 +24,7 @@ local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
 parser_config.hungarian = {
   install_info = {
     url = "https://github.com/jpt13653903/tree-sitter-hungarian.git",
-    files = { 'src/parser.c' },
+    files = { 'src/parser.c', 'src/scanner.c' },
     branch = 'master',
     generate_requires_npm = false,
     requires_generate_from_grammar = false,
@@ -41,17 +45,21 @@ treesitter.setup {
 }
 ```
 
-Then copy the `queries` folder to your `after` configuration folder,
-typically `~/.config/nvim/after/` on Linux
-and `~/AppData/Local/nvim/after/` on Windows.
+Then copy the `queries` folder to your `after` configuration folder, typically
+`~/.config/nvim/after` on Linux and `~/AppData/Local/nvim/after` on Windows.
+
+Also copy the contents of the `injections` folder to your `after/queries`
+folder.  These are separate in order to pass the automated tests.
 
 Finally, run `:TSUpdate`.
 
 ## Building
 
-- Follow the instructions
-  [here](https://tree-sitter.github.io/tree-sitter/creating-parsers#getting-started)
-  to setup your development environment.
+- Follow the instructions [here][ts-docs] to setup your development environment.
 - Run `npm install --save-dev tree-sitter-cli`
-- Run `node_modules/tree-sitter-cli/tree-sitter.exe generate`
+- Add `node_modules/.bin` to your environment path
+- Run `tree-sitter generate`
+- Run `tree-sitter test`
+
+[ts-docs]: https://tree-sitter.github.io/tree-sitter/creating-parsers#getting-started
 
