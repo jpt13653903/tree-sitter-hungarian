@@ -1,18 +1,46 @@
 .vs
 .vscode
-*.swp
 *.bak
+*.swp
 ~*
+debug.log
 
-*.exp
-*.lib
-*.obj
+# Rust artifacts
+Cargo.lock
+target/
+
+# Node artifacts
+build/
+prebuilds/
+node_modules/
+*.tgz
+
+# Swift artifacts
+.build/
+
+# Go artifacts
+go.sum
+_obj/
+
+# Python artifacts
+.venv/
+dist/
+*.egg-info
+*.whl
+
+# C artifacts
+*.a
 *.so
-src/*.json
+*.so.*
+*.dylib
+*.dll
+*.pc
 
-Cargo.toml
-binding*
-node_modules
+# Example dirs
+/examples/*/
 
-package-lock.json
+# Grammar volatiles
+*.wasm
+*.obj
+*.o
 

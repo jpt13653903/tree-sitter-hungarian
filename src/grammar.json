@@ -1,0 +1,54 @@
+{
+  "name": "hungarian",
+  "rules": {
+    "identifier": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_hungarian"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_normal"
+        }
+      ]
+    },
+    "_hungarian": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "prefix"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "body"
+        }
+      ]
+    }
+  },
+  "extras": [],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [
+    {
+      "type": "SYMBOL",
+      "name": "prefix"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "body"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "_normal"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "error_sentinel"
+    }
+  ],
+  "inline": [],
+  "supertypes": []
+}

@@ -1,0 +1,11 @@
+prefix=@PREFIX@
+libdir=@LIBDIR@
+includedir=@INCLUDEDIR@
+
+Name: tree-sitter-hungarian
+Description: Hungarian grammar for tree-sitter
+URL: @URL@
+Version: @VERSION@
+Requires: @REQUIRES@
+Libs: -L${libdir} @ADDITIONAL_LIBS@ -ltree-sitter-hungarian
+Cflags: -I${includedir}
