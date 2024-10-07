@@ -1,0 +1,34 @@
+{
+  "grammars": [
+    {
+      "name": "hungarian",
+      "camelcase": "Hungarian",
+      "scope": "source.hungarian",
+      "path": ".",
+      "file-types": null,
+      "highlights": "queries/hungarian/highlights.scm",
+      "injection-regex": "^hungarian$"
+    }
+  ],
+  "metadata": {
+    "version": "1.1.0",
+    "license": "MIT",
+    "description": "Hungarian grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "John-Philip Taylor"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/jpt13653903/tree-sitter-hungarian"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}
