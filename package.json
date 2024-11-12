@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-hungarian",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Hungarian grammar for tree-sitter",
   "repository": "github:jpt13653903/tree-sitter-hungarian",
   "author": "John-Philip Taylor",
