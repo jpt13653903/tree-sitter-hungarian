@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-hungarian",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Hungarian grammar for tree-sitter",
   "repository": "github:jpt13653903/tree-sitter-hungarian",
   "author": "John-Philip Taylor",
@@ -22,8 +22,8 @@
     "src/**"
   ],
   "dependencies": {
-    "node-addon-api": "^8.2.2",
-    "node-gyp-build": "^4.8.3"
+    "node-addon-api": "^8.3.0",
+    "node-gyp-build": "^4.8.4"
   },
   "devDependencies": {
     "prebuildify": "^6.0.1",
@@ -41,6 +41,15 @@
     "install": "node-gyp-build",
     "prestart": "tree-sitter build --wasm",
     "start": "tree-sitter playground",
-    "test": "node --test bindings/node/*_test.js"
-  }
+    "test": "node --test bindings/node/*_test.js",
+    "prebuildify": "prebuildify --napi --strip"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.hungarian",
+      "injection-regex": "^hungarian$",
+      "file-types": null,
+      "highlights": "queries/hungarian/highlights.scm"
+    }
+  ]
 }
