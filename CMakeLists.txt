@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-hungarian
-        VERSION "1.1.4"
+        VERSION "1.2.0"
         DESCRIPTION "Hungarian grammar for tree-sitter"
         HOMEPAGE_URL "https://github.com/jpt13653903/tree-sitter-hungarian"
         LANGUAGES C)
