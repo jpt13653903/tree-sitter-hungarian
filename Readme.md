@@ -15,6 +15,44 @@ where the company coding standard demands it.
 
 ## Setup Process
 
+Setup depends on the version of nvim-treesitter:
+
+### nvim-treesitter on `main`
+
+Configure your `treesitter.lua` (or equivalent) as follows:
+
+```lua
+vim.api.nvim_create_autocmd('User', { pattern = 'TSUpdate',
+callback = function()
+  require('nvim-treesitter.parsers').hungarian = {
+    install_info = {
+      url     = "https://github.com/jpt13653903/tree-sitter-hungarian.git",
+      files   = { 'src/parser.c', 'src/scanner.c' },
+      branch  = 'master',
+      queries = 'queries/hungarian',
+    },
+  }
+end})
+
+languages = {
+  -- Some list of languages...
+  'hungarian',
+  -- Some more languages...
+}
+local treesitter = require('nvim-treesitter')
+treesitter.install(languages)
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern  = languages,
+  callback = function() vim.treesitter.start() end,
+})
+```
+
+Then copy the contents of the `injections` folder to your `after/queries`
+folder.
+
+### nvim-treesitter on `master` (legacy)
+
 Configure your `treesitter.lua` (or equivalent) as follows:
 
 ```lua
