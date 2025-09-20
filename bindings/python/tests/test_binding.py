@@ -1,12 +1,12 @@
 from unittest import TestCase
 
-import tree_sitter
+from tree_sitter import Language, Parser
 import tree_sitter_hungarian
 
 
 class TestLanguage(TestCase):
     def test_can_load_grammar(self):
         try:
-            tree_sitter.Language(tree_sitter_hungarian.language())
+            Parser(Language(tree_sitter_hungarian.language()))
         except Exception:
             self.fail("Error loading Hungarian grammar")
