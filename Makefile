@@ -1,6 +1,7 @@
 LANGUAGE_NAME := tree-sitter-hungarian
 HOMEPAGE_URL := https://github.com/jpt13653903/tree-sitter-hungarian
 VERSION := 1.2.0
+DESCRIPTION := Hungarian grammar for tree-sitter
 
 # repository
 SRC_DIR := src
